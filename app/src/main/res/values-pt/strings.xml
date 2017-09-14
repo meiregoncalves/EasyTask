@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Easy Tasks</string>
+    <string name="action_sign_in_short">Entrar</string>
+    <string name="error_incorrect_password">Senha incorreta</string>
+    <string name="error_field_required">Campo obrigatório</string>
+    <string name="error_invalid_email">Usuário inválido</string>
+    <string name="error_invalid_password">A senha digitada é muito curta</string>
+    <string name="navigation_drawer_close">Fechar menu de navegação</string>
+    <string name="navigation_drawer_open">\"Abrir menu de navegação \"</string>
+    <string name="prompt_password">Senha</string>
+    <string name="prompt_email">Usuário</string>
+    <string name="title_activity_login">Login</string>
+    <string name="keep_connected">Mantenha-me Conectado</string>
+    <string name="error_incorrect_login">Login incorreto</string>
+    <string name="cancel">Cancelar</string>
+    <string name="cancel_button">Cancelar</string>
+    <string name="confirm_del">A tarefa será removida. Confirmar?</string>
+    <string name="confirm_exclude_many">Todas as tarefas selecionadas serão removidas. Continuar?</string>
+    <string name="delete">Excluir</string>
+    <string name="deleted">Excluído</string>
+    <string name="description_text">Descrição</string>
+    <string name="erro_deleting">Erro ao excluir tarefa</string>
+    <string name="error_closing">Erro ao fechar Aplicativo</string>
+    <string name="error_login">Erro ao conectar. Tente novamente</string>
+    <string name="error_saving_task">Erro ao salvar tarefa</string>
+    <string name="failed_to_access">Falha ao acessar aplicativo</string>
+    <string name="log_out">Desconectar-se</string>
+    <string name="login_canceled">Login cancelado</string>
+    <string name="new_task">Nova Tarefa</string>
+    <string name="salved">Salvo</string>
+    <string name="yes">Sim</string>
+    <string name="task_text">Tarefa</string>
+    <string name="save">Salvar</string>
+    <string name="confirm_disconect">Tem certeza que deseja desconectar-se?</string>
+    <string name="share">Compartilhar Tarefas</string>
+    <string name="about">Sobre</string>
+    <string name="developer_text">Desenvolvido por</string>
+    <string name="version_text">Versão</string>
+    <string name="yours_tasks_will_be_appeared_here">Suas tarefas serão exibidas aqui</string>
+    <string name="contact_phone">Telefone de Contato</string>
+    <string name="add_location_for_this_task">Adicionar Localização para esta tarefa</string>
+    <string name="question_call_this_number">Ligar para este número?</string>
+    <string name="error_access_maps">Erro ao acessar mapa</string>
+    <string name="msg_no_phone">Informe um número para ligar</string>
+    <string name="title_activity_maps">Mapa</string>
+    <string name="edit_location">EDITAR LOCALIZAÇÃO</string>
+    <string name="done">Feito</string>
+    <string name="mark_done">Marcar todas as tarefas selecionadas como \"Feitas\"?</string>
+    <string name="mark_one_done">Marcar a tarefa selecionada como \"Feita\"?</string>
+    <string name="my_tasks">Minhas Tarefas:</string>
+    <string name="add_reminder">Adicionar Lembrete</string>
+    <string name="ok">Ok</string>
+    <string name="format_hour">HH:mm</string>
+    <string name="edit_reminder">Editar Tarefa</string>
+    <string name="msg_you_have_task">Você tem uma tarefa a fazer!</string>
+    <string name="dont_forget">Não se esqueça!</string>
+    <string name="message_no_title">Você precisa informar um título para a tarefa</string>
+    <string name="remove">EXCLUIR</string>
+
+    <string-array name="alarmRepeat_array">
+        <item>Não se Repete</item>
+        <item>Diariamente</item>
+        <item>Semanalmente</item>
+        <item>Mensalmente</item>
+        <item>Anualmente</item>
+    </string-array>
+    <string name="mark_undone">Marcar todas as tarefas selecionadas como \"Não Feitas\"?</string>
+    <string name="mark_one_undone">Marcar a tarefa selecionada como \"Não Feita\"?</string>
+    <string name="date_passed">Essa data já passou</string>
+    <string name="error_permission_call">Para fazer ligações você precisa fornecer permissão</string>
+    <string name="error_permission_location">Para usar mapas você precisa fornecer permissão</string>
+</resources>

@@ -1,0 +1,52 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.meire.agendatarefas.fragments.AboutFragment"
+    android:background="@color/color_backgroud_light">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center">
+
+    <ImageView
+        android:id="@+id/splash"
+        android:layout_width="@dimen/imagem_l"
+        android:layout_height="@dimen/imagem_a"
+        android:background="@drawable/logo"
+        android:layout_gravity="center"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvVersion"
+            tools:text="1.0"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/margintop_text_version"
+            android:textSize="@dimen/size_text_about"
+            android:textColor="@color/colorPrimaryDark"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvDeveloper"
+            tools:text="Meire"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/margintop_text_developer"
+            android:textSize="@dimen/size_text_about"
+            android:textColor="@color/colorPrimaryDark"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvEmail"
+            android:text="@string/email_dev"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/margintop_text_developer"
+            android:textSize="@dimen/size_text_about"
+            android:textColor="@color/colorPrimaryDark"/>
+
+    </LinearLayout>
+</FrameLayout>

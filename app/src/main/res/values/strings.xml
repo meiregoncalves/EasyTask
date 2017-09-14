@@ -1,0 +1,77 @@
+<resources>
+    <string name="app_name">Easy Tasks</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="title_activity_login">Sign in</string>
+    <string name="prompt_email">User</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="error_invalid_email">This user is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_incorrect_login">This login is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="keep_connected">Keep me connected</string>
+    <string name="error_login">Error connecting, please try again</string>
+    <string name="log_out">Log Out</string>
+    <string name="error_closing">Error closing app</string>
+    <string name="new_task">New Task</string>
+    <string name="task_text">Task</string>
+    <string name="description_text">Description</string>
+    <string name="failed_to_access">Failed to access app</string>
+    <string name="save">Save</string>
+    <string name="salved">Salved</string>
+    <string name="error_saving_task">Error saving Task</string>
+    <string name="delete">Delete</string>
+    <string name="cancel">Cancel</string>
+    <string name="deleted">Deleted</string>
+    <string name="erro_deleting">Error deleting task</string>
+    <string name="confirm_del">This task will be removed. Confirm?</string>
+    <string name="yes">Yes</string>
+    <string name="cancel_button">CANCEL</string>
+    <string name="confirm_exclude_many">All as selected tasks will be removed. Continue?</string>
+    <string name="facebook_app_id" translatable="false">121358905177311</string>
+    <string name="fb_login_protocol_scheme" translatable="false">fb121358905177311</string>
+    <string name="login_canceled">Login canceled</string>
+    <string name="confirm_disconect">Are you sure you want to disconnect?</string>
+    <string name="share">Share Tasks</string>
+    <string name="about">About</string>
+    <string name="developer_text">Developed by </string>
+    <string name="version_text">Version </string>
+    <string name="developer_name" translatable="false">Meire Gonçalves</string>
+    <string name="yours_tasks_will_be_appeared_here">Yours tasks will be appeared here</string>
+    <string name="add_location_for_this_task">Add location for this task</string>
+    <string name="contact_phone">Contact Phone</string>
+    <string name="question_call_this_number">Call this number?</string>
+    <string name="msg_no_phone">Enter a number to call</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="error_access_maps">Error to access maps</string>
+    <string name="edit_location">EDIT LOCATION</string>
+    <string name="done">Done</string>
+    <string name="mark_done">Mark all selected tasks as \"Done\"?</string>
+    <string name="mark_one_done">Mark the selected task as \"Done\"?</string>
+    <string name="mark_undone">Mark all selected tasks as \"Not Done\"?</string>
+    <string name="mark_one_undone">Mark the selected task as \"Not Done\"?</string>
+    <string name="my_tasks">My  Tasks:</string>
+    <string name="add_reminder">Add Reminder</string>
+    <string name="ok">OK</string>
+    <string name="format_hour">h:mm a</string>
+    <string name="edit_reminder">Edit Reminder</string>
+    <string name="msg_you_have_task">You have a task to do!</string>
+    <string name="dont_forget">Don\'t Forget!</string>
+    <string name="remove">REMOVE</string>
+    <string name="message_no_title">You need to give a title to the task</string>
+    <string name="email_dev" translatable="false">meire.gonc@gmail.com</string>
+    <string name="date_passed">This date has passed</string>
+    <string name="error_permission_call">To make calls, you need to give permission</string>
+    <string name="error_permission_location">To use maps you need give permission</string>
+
+    <string-array name="alarmRepeat_array">
+        <item>Without Repetition</item>
+        <item>Daily</item>
+        <item>Weekly</item>
+        <item>Monthly</item>
+        <item>Annually</item>
+    </string-array>
+</resources>

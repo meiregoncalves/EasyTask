@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="@dimen/activity_horizontal_margin">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:clickable="true"
+        android:id="@+id/laydate">
+    <TextView
+        android:id="@+id/tvDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="date"
+        android:text="data"
+        android:textSize="@dimen/size_no_tasks"
+        android:layout_marginTop="@dimen/margin_reminder"
+        android:layout_marginLeft="@dimen/margin_reminder"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/down"
+        android:layout_marginLeft="@dimen/margin_reminderbutton"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:clickable="true"
+        android:id="@+id/laytime">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="time"
+        android:id="@+id/tvTime"
+        android:textSize="@dimen/size_no_tasks"
+        android:layout_marginTop="@dimen/margin_reminder"
+        android:layout_marginLeft="@dimen/margin_reminder"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/down"
+            android:layout_marginLeft="@dimen/margin_reminderbutton"/>
+    </LinearLayout>
+
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/spAlarmRepeat"
+        android:layout_marginTop="@dimen/margin_reminder"
+        android:layout_marginLeft="@dimen/margin_reminder"></Spinner>
+
+
+</LinearLayout>

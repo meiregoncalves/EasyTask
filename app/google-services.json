@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "23485239557",
+    "firebase_url": "https://easytasks-1502991656595.firebaseio.com",
+    "project_id": "easytasks-1502991656595",
+    "storage_bucket": "easytasks-1502991656595.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:23485239557:android:eb2428a08553d7f7",
+        "android_client_info": {
+          "package_name": "com.example.meire.agendatarefas"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "23485239557-7h7kklfq72pdomagals1lrva7v00i5t8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.meire.agendatarefas",
+            "certificate_hash": "d04d41b685005eef41c65b57cfc7392a86ec0513"
+          }
+        },
+        {
+          "client_id": "23485239557-77tkem9stsl0inbina2v9c449nje54is.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCmEnux6oTQ2y2V3VC6dxPH5NmBVoCR_9E"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "23485239557-77tkem9stsl0inbina2v9c449nje54is.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

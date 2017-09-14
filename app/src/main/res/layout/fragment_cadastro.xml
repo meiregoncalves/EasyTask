@@ -1,0 +1,135 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.meire.agendatarefas.fragments.CadastroFragment">
+
+    <ScrollView
+        android:id="@+id/login_form"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/activity_horizontal_margin">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:weightSum="1">
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/etTask"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/task_text"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:maxLength="100"/>
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:id="@+id/etDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/description_text"
+                    android:inputType="textMultiLine"
+                    android:minLines="3"
+                    android:maxLines="10"
+                    android:maxLength="300"/>
+
+            </android.support.design.widget.TextInputLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2">
+                    <EditText
+                        android:id="@+id/etPhoneNumber"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/contact_phone"
+                        android:inputType="phone"
+                        android:maxLength="20"/>
+                </android.support.design.widget.TextInputLayout>
+
+                <ImageView
+                    android:id="@+id/imgCall"
+                    android:layout_width="40dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/action_call"
+                    android:clickable="true"/>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btAddReminder"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:drawableLeft="@drawable/action_alarm"
+                android:background="@color/colorAccent"
+                android:text="@string/add_reminder"
+                android:textColor="@color/icons"
+                android:layout_marginTop="@dimen/activity_horizontal_margin"
+                android:layout_marginRight="@dimen/cardview_default_elevation"
+                android:layout_marginLeft="@dimen/cardview_default_elevation"/>
+
+            <Button
+                android:id="@+id/btAddLocation"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:drawableLeft="@drawable/action_maps"
+                android:background="@color/colorAccent"
+                android:text="@string/add_location_for_this_task"
+                android:textColor="@color/icons"
+                android:layout_marginTop="@dimen/activity_horizontal_margin"
+                android:layout_marginRight="@dimen/cardview_default_elevation"
+                android:layout_marginLeft="@dimen/cardview_default_elevation"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:id="@+id/LayAdress"
+                android:visibility="invisible"
+                android:layout_marginTop="@dimen/activity_horizontal_margin"
+                android:layout_marginRight="@dimen/cardview_default_elevation"
+                android:layout_marginLeft="@dimen/cardview_default_elevation">
+
+                <com.google.android.gms.maps.MapView
+                    xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:id="@+id/mapView"
+                    android:layout_width="@dimen/tam_map"
+                    android:layout_height="@dimen/tam_map" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="@dimen/cardview_default_elevation">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tvAdress_Name"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/size_no_tasks"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tvAdress_Ad"/>
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</FrameLayout>

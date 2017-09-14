@@ -1,0 +1,23 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primary_light"
+    tools:context="com.example.meire.agendatarefas.fragments.ShowTasksFragment">
+
+    <android.support.v7.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/yours_tasks_will_be_appeared_here"
+        android:id="@+id/tvNoTasks"
+        android:layout_gravity="center"
+        android:textSize="@dimen/size_no_tasks"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/rvTasks"
+        android:layout_marginTop="@dimen/margin_recyclerview"
+        android:background="@color/primary_light"></android.support.v7.widget.RecyclerView>
+
+</FrameLayout>
