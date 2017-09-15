@@ -10,7 +10,7 @@ public class RetrofitClient {
     private static Retrofit retrofit = null;
 
     public static Retrofit getClient(String baseUrl) {
-       OkHttpClient client = new OkHttpClient.Builder().connectTimeout(5000, TimeUnit.MILLISECONDS).readTimeout(5000, TimeUnit.MILLISECONDS)
+       OkHttpClient client = new OkHttpClient.Builder().connectTimeout(100000, TimeUnit.MILLISECONDS).readTimeout(10000, TimeUnit.MILLISECONDS)
                .build();
 
         if (retrofit==null) {

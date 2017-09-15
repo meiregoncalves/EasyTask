@@ -66,58 +66,36 @@ public class SplashScreenActivity extends AppCompatActivity {
             @Override
             public void onResponse(Call<LoginModel> call, Response<LoginModel> response) {
                 if (response.isSuccessful()) {
-                    final String user = response.body().getUser();
-                    final String passwrd = response.body().getPassword();
-                    final LoginModel mlogin = response.body();
-                    SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(SplashScreenActivity.this);
-
                     loginDAO loginDAO = new loginDAO(SplashScreenActivity.this);
                     if (!loginDAO.add(response.body())){
                         Toast.makeText(SplashScreenActivity.this,  R.string.failed_to_access, Toast.LENGTH_SHORT).show();
                         return;
                     }
 
-                    if (AccessToken.getCurrentAccessToken() != null) {
-                        executeGraphRequest(AccessToken.getCurrentAccessToken().getUserId());
-                    }
-                    else if (sp.getBoolean("keepConected", false) && sp.getString("user","").equals(user) && sp.getString("password","").equals(passwrd)){
-                        new Handler().postDelayed(new Runnable() {
-                            @Override
-                            public void run() {
-                                Intent intent = new Intent(SplashScreenActivity.this,
-                                        MainActivity.class);
-                                intent.setFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
-                                intent.putExtra("LOGIN", mlogin);
-
-                                if (getIntent() != null)
-                                {
-                                    intent.putExtra("IDTASK", getIntent().getIntExtra("IDTASK",0));
-                                }
-
-                                startActivity(intent);
-                                SplashScreenActivity.this.finish();
-                            }
-                        }, SPLASH_DISPLAY_LENGTH);
+                    ExecuteLogin();
+                }
+                else  {
+                    loginDAO loginDAO = new loginDAO(SplashScreenActivity.this);
+                    if (loginDAO.getCount() > 0 || AccessToken.getCurrentAccessToken() != null) {
+                        ExecuteLogin();
                     }
                     else {
-                        new Handler().postDelayed(new Runnable() {
-                            @Override
-                            public void run() {
-                                Intent intent = new Intent(SplashScreenActivity.this,
-                                        LoginActivity.class);
-                                intent.setFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
-                                startActivity(intent);
-                                SplashScreenActivity.this.finish();
-                            }
-                        }, SPLASH_DISPLAY_LENGTH);
+                        Toast.makeText(SplashScreenActivity.this, R.string.failed_to_access, Toast.LENGTH_LONG).show();
+                        finish();
                     }
                 }
             }
 
             @Override
             public void onFailure(Call<LoginModel> call, Throwable t) {
-                Toast.makeText(SplashScreenActivity.this, R.string.failed_to_access, Toast.LENGTH_LONG).show();
-                onDestroy();
+                loginDAO loginDAO = new loginDAO(SplashScreenActivity.this);
+                if (loginDAO.getCount() > 0 || AccessToken.getCurrentAccessToken() != null) {
+                    ExecuteLogin();
+                }
+                else {
+                    Toast.makeText(SplashScreenActivity.this, R.string.failed_to_access, Toast.LENGTH_LONG).show();
+                    finish();
+                }
             }
         });
     }
@@ -158,5 +136,46 @@ public class SplashScreenActivity extends AppCompatActivity {
         parameters.putString("fields", "id, name");
         request.setParameters(parameters);
         request.executeAsync();
+    }
+
+    private void ExecuteLogin(){
+        final SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(SplashScreenActivity.this);
+
+        if (AccessToken.getCurrentAccessToken() != null) {
+            executeGraphRequest(AccessToken.getCurrentAccessToken().getUserId());
+        }
+        else if (sp.getBoolean("keepConected", false)){
+            new Handler().postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    Intent intent = new Intent(SplashScreenActivity.this,
+                            MainActivity.class);
+                    intent.setFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+                    LoginModel loginModel = new LoginModel();
+                    loginModel.setUser(sp.getString("user",""));
+                    intent.putExtra("LOGIN", loginModel);
+
+                    if (getIntent() != null)
+                    {
+                        intent.putExtra("IDTASK", getIntent().getIntExtra("IDTASK",0));
+                    }
+
+                    startActivity(intent);
+                    SplashScreenActivity.this.finish();
+                }
+            }, SPLASH_DISPLAY_LENGTH);
+        }
+        else {
+            new Handler().postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    Intent intent = new Intent(SplashScreenActivity.this,
+                            LoginActivity.class);
+                    intent.setFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+                    startActivity(intent);
+                    SplashScreenActivity.this.finish();
+                }
+            }, SPLASH_DISPLAY_LENGTH);
+        }
     }
 }
