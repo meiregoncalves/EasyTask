@@ -51,17 +51,6 @@ public class loginDAO {
         return false;
     }
 
-    public int getCount() {
-        SQLiteDatabase db = banco.getReadableDatabase();
-        String colunas[] = {COL_USER};
-        Cursor cursor = db.query(true, TABELA_LOGINS, colunas, null, null, null, null, null, null);
-        if (cursor != null )
-        {
-            return cursor.getCount();
-        }
-        return 0;
-    }
-
     public boolean getUserExists(String user) {
         SQLiteDatabase db = banco.getReadableDatabase();
         String colunas[] = {COL_USER, COL_PASSWORD};
